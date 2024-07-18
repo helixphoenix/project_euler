@@ -7,8 +7,6 @@
 # Find the sum of all the multiples of 3 or 5 below 1000.
 
 
-from audioop import mul
-
 
 def multiplies3_5( limit):
     sum=0
@@ -18,7 +16,7 @@ def multiplies3_5( limit):
     return print(sum)
 
 
-multiplies3_5(10)         
-multiplies3_5(1000)         
+multiplies3_5(10)  # 23      
+multiplies3_5(1000) #  233168        
 
     

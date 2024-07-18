@@ -18,9 +18,11 @@ def even_fibonacci(limit):
     f=2
     p=0
     while f < limit:
-        print(f)
+        # print(f)
         if f%2==0:
+            # print(f)
             sum=sum+f
+            print(sum)
         p=f    
         f=prev+f 
         prev=p
@@ -29,5 +31,16 @@ def even_fibonacci(limit):
 even_fibonacci(4000000)
  
              
-        
+# 2
+# 10
+# 44
+# 188
+# 798
+# 3382
+# 14328
+# 60696
+# 257114
+# 1089154
+# 4613732
+# sum: 4613732        
                 

@@ -1,5 +1,4 @@
-# Largest palindrome product
-# Show HTML problem content 
+# Largest palindrome product 
 # Problem 4
 # A palindromic number reads the same both ways.
 # The largest palindrome made 
@@ -10,25 +9,29 @@
 
 
 def is_palindrome(num):
-    return (list(num)[:3]==list(num)[:2:-1])
+    rev_num=list(num)
+    rev_num.reverse()
+    return (list(num))==rev_num
 
-def find_palindrome(num):
-    for j in range(899): 
-       if is_palindrome(str(num * (999-j))):
-         return (num * (999-j))
-    return None 
 
-def largest_palindrome():
-       for k in range(899): 
-          t= find_palindrome(999-k)
-          if t!=None:
-              return print(t)
-          
+def  search_palindrome():
+    big_one=0
+    f=open("big_palindromes.txt","a")
+    for p in reversed(range(100,1000)):
+        for k in reversed(range(100,999)):
+            prod=p*k
+            if is_palindrome(str(prod)) and prod>big_one:
+               f.write(str([prod,p,k,is_palindrome(str(prod))]))
+               big_one=prod
+    return big_one
+                 
 
-largest_palindrome()        
-        
-        
-    
+
+
+
+big=search_palindrome()        
+print(big)   #[906609, 993, 913, True]
+# print(is_palindrome(str(9009)))
     
     
     
