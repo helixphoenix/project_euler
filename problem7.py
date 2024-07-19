@@ -17,15 +17,15 @@ prime_numbers=[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 6
 
 
 
-def find_the_squares(num):
+def find_the_squares(ind,num):
     squares=[]
-    for i in range (1,num):
+    for i in range (ind,num):
         squares.append(i*i)
     return squares
 
-def find_the_3rd_power(num):
+def find_the_3rd_power(ind,num):
     third_powers=[]
-    for i in range (1,num):
+    for i in range (ind,num):
      third_powers.append(i*i*i)
     return third_powers
 
@@ -36,32 +36,31 @@ def find_the_3rd_power(num):
 # print(find_the_squares(10001))
 
 
-def general_check(num):
-    reduced=[2,3,5,7,11,13]
-    squares=find_the_squares(num)
-    third_powers=find_the_3rd_power(num)
-    for i in range(12,num):
+def general_check(ind,num):
+    reduced=[]
+    squares=find_the_squares(ind,num)
+    third_powers=find_the_3rd_power(ind,num)
+    for i in range(ind,num):
         if i not in squares and i not in third_powers:
-            if i%2 !=0 and i%3!=0 and i%5!=0 and i%7!=0 and i%11!=0 and i%13!=0:
-                   reduced.append(i)
+           reduced.append(i)
     return reduced            
 
 
-def prime_check(num):
-    numbers=general_check(num)
-    primes=numbers
+def prime_check(ind,num):
+    numbers=extracted_primez+general_check(ind,num)
+    primes=extracted_primez+numbers
     for i in reversed(numbers):
         for x in numbers:
             if i!=x and i%x==0 :
+                print(i)
                 primes.remove(i)
                 break
             else:    
                 continue
     return primes            
         
-# print(general_check(400))
 
-# primez=prime_check(400)
+# primez=prime_check(0,400)
 
 # print(primez==prime_numbers)
 
@@ -78,5 +77,5 @@ def prime_check(num):
 # 104743
 
 
-print(extracted_primez[0]) #2
-print(extracted_primez[10000])  #104743
+# print(extracted_primez[0]) #2
+# print(extracted_primez[10000])  #104743
