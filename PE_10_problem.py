@@ -2,8 +2,7 @@
 
 # Find the sum of all the primes below two million.
 
-from problem7 import extracted_primez,prime_check
-
+from PE_07_problem import extracted_primez,prime_check
 
 def prime_summer(known_primes,unknown_start,unknown_end):
     unknown_primes=prime_check(unknown_start,unknown_end)
