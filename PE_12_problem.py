@@ -30,9 +30,8 @@ def fivehundered_checker():
             return triangle    
 
 
-triangle_500= fivehundered_checker()        
-print(triangle_500)        
-
+# triangle_500= fivehundered_checker()        
+# print(triangle_500)        
 # count 576
 # triangle 76576500
 # term 12375  
