@@ -15,8 +15,6 @@
 
 # thirtyone={"January":1,"March":3,"May":5,"July":7,"August":8,"October":10}
 
-# febs={"feb28":2,"feb29":2}
-
 
 # yearly 365 days 12 months 52 weeks 
 
@@ -108,4 +106,4 @@ def fundaytion(final_year):
     return firstsun
 
 
-print(fundaytion(2000)) #1200
+# print(fundaytion(2000)) #1200

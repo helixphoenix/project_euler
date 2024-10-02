@@ -21,12 +21,12 @@
 # [0][0] [1][0] [2][0] [2][1] [2][2]
 
 
-def factoriel(n):
+def factorial(n):
     fact=1
-    for i in range(1,n):
+    for i in range(1,n+1):
         fact=fact*i
     return fact    
         
-print (factoriel(20))
+# print (factorial(20))
 
-# 121645100408832000
+# 2432902008176640000
