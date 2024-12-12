@@ -52,11 +52,7 @@ def consequence():
     consec=[0,0]
     for b in range(-1000,1001):
          for a in reversed(range(-999,1000)):
-           print(a,b)
-           if a==1 and b==41:
-               print("shout")
            n=quadratic_prime(a,b)
-           print("quad",n)
            if n>consec[1]:
                consec=[(a*b),n]
     return consec 
