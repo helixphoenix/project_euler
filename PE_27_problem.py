@@ -1,9 +1,6 @@
-
-# b 997
-# a 991
 from PE_07_problem import extracted_primez
 
-
+#some wonderings around the formula
 # |a|<1000 and |b|<=1000
 # n^2+n+41+n^2-79n+1601 = 2n^2 -78n +1642   0<=2n<=79+39 ==>  n^2 -39n + 821 0<=n<=59
 # a>n, n(a+n) +b
@@ -60,8 +57,6 @@ def consequence():
 
 print(consequence)
     
-# print(quadratic_prime(1,41))
-# print(quadratic_prime(-79,1601))
 
 # n>39
 # [a*b,n]
